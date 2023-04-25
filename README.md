@@ -17,6 +17,8 @@ To Do Application (Backend) Software Developer (Backend)
 
 All the API's are listed below:
 
+```
+
 1. Api Name : LoginAPI
    path     : /api/login
    methods  : [POST]
@@ -78,6 +80,9 @@ All the API's are listed below:
      response : 404 ,200
 
  
+
+```
+
 
 ## Entity Relationship Diagram:
 
