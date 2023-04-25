@@ -1,0 +1,77 @@
+{% extends 'app_base.html' %}
+
+{% block content %}
+
+<div class="row row-cols-1">
+    <p class="lead text-muted">
+        {% with messages=get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {% if alarm %}
+                    <div class="alert alert-danger" role="alert">
+                        {{message}}
+                    </div>
+                    {% else %}
+                    <div class="alert alert-success" role="alert">
+                        {{message}}
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </p>
+</div>
+
+{% if c==1 %}
+
+
+    {% if data.code==3%}
+
+
+    <div class="row ">
+            
+        <div class="py-5 text-center">
+            <h2>Task Created</h2>
+            <p class="lead">You can view all your tasks here.</p>
+
+
+            <a href="/home" class="btn btn-primary my-2">View all Tasks</a>
+
+                
+        </div>
+
+
+    
+    </div>
+
+    {% endif %}
+
+{% endif %}
+
+{% if c==2 %}
+
+    {% if data.code==5%}
+
+
+    <div class="row ">
+            
+        <div class="py-5 text-center">
+            <h2>Task Updated</h2>
+            <p class="lead">You can view all your tasks here.</p>
+
+
+            <a href="/home" class="btn btn-primary my-2">View all Tasks</a>
+
+                
+        </div>
+
+
+    
+    </div>
+
+    {% endif %}
+
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+erDiagram
+    user ||--o{ todo:""
+    user {
+        integer user_id
+        string username
+        string password
+        string email
+        date dob
+        datetime date_joined 
+
+    }
+    todo{
+        integer todo_id
+        integer creator_id 
+        string title
+        string description
+        integer status 
+        datetime date_created
+        datetime last_updated
+        datetime deadline
+        
+    }

@@ -1,0 +1,104 @@
+{% extends 'app_base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+<h1 id="todo-application">ToDo-Application</h1>
+<p>To Do Application (Backend) Software Developer (Backend)</p>
+<h2 id="how-to-run-the-application">How to run the application:</h2>
+<ol type="1">
+<li>Download the Source code</li>
+<li>Navigate to root folder</li>
+<li>Run the setup.sh file [ in case if you can’t run the .sh file you
+can directly run main file if your system met all the
+requirements.]</li>
+</ol>
+<h2 id="browsing-through-the-application-front-end">Browsing through the
+application [Front End]:</h2>
+<ol type="1">
+<li>You can directly access the web application by clicking on the
+specified url by the python script output.</li>
+<li>After entering the application you can see login.</li>
+<li>You can create a user and login to the application
+successfully.</li>
+</ol>
+<h2 id="using-apis">Using APIs :</h2>
+<p>All the API’s are listed below:</p>
+<pre><code>
+1. Api Name : LoginAPI
+   path     : /api/login
+   methods  : [POST]
+   parameter : [username, password]
+   response : 404 ,200
+   
+   
+2. Api Name : CreateUserAPI
+   path     : /api/create_user
+   methods  : [POST]
+   parameter : [username, email, dob, password, date_joined]
+   response : 404 ,200
+   
+   
+3. Api Name : DeleteUserAPI
+   path     : /api/delete_user
+   methods  : [POST]
+   parameter : [user_id]
+   response : 404 ,200
+   
+   
+4. Api Name : UpdateUserAPI
+   path     : /api/update_user
+   methods  : [POST]
+   parameter : [username, email, dob, password, date_joined]
+   response : 404 ,200
+   
+   
+5. Api Name : UserDetailsAPI
+   path     : /api/user_details
+   methods  : [POST]
+   parameter : [user_id]
+   response : 404 ,200
+   
+   
+6. Api Name : GetTodoAPI
+   path     : /api/get_todo
+   methods  : [GET]
+   parameter : [todo_id, user_id]
+   response : 404 ,200
+   
+ 
+7. Api Name : TodoAPI
+   path     : /api/get_todo
+   methods  : [GET]
+     parameter : [user_id]
+     response : 404 ,200
+
+   methods  : [POST]
+     parameter : [user_id,todo_id,title,status,description,last_updated,deadline]
+     response : 404 ,200
+
+   methods  : [PUT]
+     parameter : [user_id,title,status,description,last_updated,deadline,date_created]
+     response : 404 ,200
+
+   methods  : [DELETE]
+     parameter : [user_id,todo_id]
+     response : 404 ,200
+
+ 
+</code></pre>
+<h2 id="entity-relationship-diagram">Entity Relationship Diagram:</h2>
+<figure>
+<img
+src="https://user-images.githubusercontent.com/89150264/234098722-0022f089-78e7-45c0-b1ca-05e3ab44e698.svg"
+alt="TODO" />
+
+</figure>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'app_base.html' %}
+
+{% block content %}
+
+
+<div class="container-fluid">
+    <div class="container-fluid details-of-user">
+
+        <div class="py-5 text-center">
+        <h2>Update task</h2>
+        <p class="lead">You can update task here.</p>
+        </div>
+  
+      <div class="row g-5 detail-row">
+        
+        <div class="col col-mid-8">
+          <h4 class="mb-3">Update Task</h4>
+
+            <div class="row g-3">
+                <form method="POST" action="/updated/{{data.todo_id}}">
+                    <div class="col-12">
+                        <label for="email" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="exampleDropdownFormEmail2" placeholder="{{data.title}}" name="title" value="">
+            
+                    </div>
+                    
+
+                    <div class="col-12">
+                        <label  class="form-label">Description</label>
+                        <div class="input-group has-validation">
+                        <textarea class="form-control" aria-label="With textarea" placeholder="{{data.description}}" name="description" value=""></textarea>
+                        <div class="invalid-feedback">
+                            Your Mobile Number is .
+                        </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-12">
+                        <label  class="form-label">Deadline</label>
+                        <div class="input-group has-validation">
+                        <input type="date" class="form-control" id="exampleDropdownFormEmail2" name="deadline" placeholder="{{data.deadline}}" value="{{data.deadline}}">
+                        <div class="invalid-feedback">
+                            Your Date of Birth is .
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label  class="form-label">Status</label>
+                        <div class="form-check">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1" value="0" {% if data.status==0 %} checked {% endif %}>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Incomplete
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1" value="1" {% if data.status==1 %} checked {% endif %}>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Completed
+                            </label>
+                        </div>
+                        
+                        </div>
+                    </div>
+                    
+                    <hr class="my-4">
+        
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Update</button>
+                </form>
+            </div>      
+        </div>
+      </div>
+  
+  
+  
+  </div>
+  </div>
+
+
+
+
+{% endblock %}
